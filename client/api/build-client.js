@@ -5,7 +5,10 @@ export default ({ req }) => {
     // We are on the server
 
     return axios.create({
-      baseURL: 'http://ingress-nginx.ingress-nginx.svc.cluster.local',
+      //for local
+      //baseURL: 'http://ingress-nginx.ingress-nginx.svc.cluster.local',
+      //for prod
+      baseURL: 'http://www.giats-tickets.ml/',
       headers: req.headers
     });
   } else {
